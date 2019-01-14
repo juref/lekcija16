@@ -1,0 +1,11 @@
+body {
+    background-color: green;
+}
+
+.cas    {
+     margin: 0 auto;
+     width: 250px;
+}
+.time {
+    font-size: 3em;
+}
