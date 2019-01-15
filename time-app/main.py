@@ -33,8 +33,9 @@ class BaseHandler(webapp2.RequestHandler):
 class MainHandler(BaseHandler):
     def get(self):
 
-        current_time = datetime.datetime.now().strftime("%H:%M:%S")
-        params = {"sporocilo": current_time}
+        current_time = datetime.datetime.now()
+        local_time = (current_time + datetime.timedelta(hours=1)).strftime("%H:%M:%S")
+        params = {"sporocilo": local_time}
 
         return self.render_template("hello.html", params=params)
 
